@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 2</title>
+    <style>
+        h1{
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            margin: 1rem;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            min-height: 25rem;
+            margin: 1rem auto;
+            border: 1px solid #a19d9d;
+            box-shadow: .5rem .5rem .3rem .01rem #a19d9d;
+            border-radius: 10%;
+        }
+        .medidas{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            color: white;
+            align-items: center;
+            text-align: center;
+            width: 15rem;
+            height: 15rem;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-weight: bold;
+            margin: 1rem;
+            box-shadow: .5rem .5rem .3rem .01rem #a19d9d;
+            justify-content: center;
+            display: flex;
+            border: 1px solid #a19d9d;
+        }
+        .comp{
+            background-color: blue;
+        }
+        .area{
+            background-color: red;
+        }
+        .vol{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Medidas de uma Esfera</h1>
+    <div class=container>
+        <script>
+        
+        var raio,comprimento,area,volume;
+
+        raio= parseFloat(prompt("Informe o raio:"));
+        comprimento=2 * Math.PI * raio;
+        area= Math.PI * (Math.pow(raio,2));
+        volume=(4/3) * Math.PI * Math.pow(raio,3);
+
+        document.write(`<div class="medidas comp">O comprimento da esfera é ${comprimento.toFixed(2)}cm</div>`);
+        document.write(`<div class="medidas area">A área da esfera é ${area.toFixed(2)}cm²</div>`);
+        document.write(`<div class="medidas vol">O volume da esfera é ${volume.toFixed(2)}cm³</div>`);
+    
+        </script>
+    </div>
+</body>
+</html>
